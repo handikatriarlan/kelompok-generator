@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Kelompok SI–3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Kelompok Generator oleh SI–3</h1>
+        <form id="teamForm">
+            <label for="names" aria-label="Masukkan Nama:">Masukkan Nama:</label>
+            <textarea id="names" name="names" rows="10" required aria-label="Kolom input nama"></textarea>
+            <label for="numGroups" aria-label="Jumlah Kelompok:">Jumlah Kelompok:</label>
+            <input type="number" id="numGroups" name="numGroups" min="1" required aria-label="Input jumlah kelompok">
+            <label for="course" aria-label="Mata Kuliah:">Mata Kuliah:</label>
+            <input type="text" id="course" name="course" required aria-label="Kolom input mata kuliah">
+            <button type="submit" aria-label="Klik untuk menghasilkan kelompok">LETSGAUR</button>
+        </form>
+        <div id="courseContainer"></div>
+        <div id="teamsContainer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
