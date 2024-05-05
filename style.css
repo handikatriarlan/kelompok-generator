@@ -124,3 +124,29 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
 }
+
+/* CSS untuk tampilan cetak */
+@media print {
+    body * {
+        visibility: hidden; /* Semua elemen disembunyikan */
+    }
+    #courseContainer, #teamsContainer, #teamsContainer * {
+        visibility: visible; /* Hanya elemen-elemen yang ingin dicetak ditampilkan */
+    }
+    #courseContainer, #teamsContainer {
+        position: absolute; /* Mengatur posisi absolut untuk elemen hasil */
+        top: 0; /* Menempatkan elemen di bagian paling atas */
+        left: 0; /* Menempatkan elemen di bagian paling kiri */
+        width: 100%; /* Menyesuaikan lebar elemen dengan lebar halaman cetak */
+        margin: 0; /* Menghapus margin */
+        padding: 0; /* Menghapus padding */
+    }
+    #courseContainer {
+        margin-bottom: 20px; /* Memberikan jarak antara elemen hasil mata kuliah dan elemen hasil kelompok */
+    }
+    .team {
+        margin-bottom: 20px; /* Memberikan jarak antara setiap kelompok */
+    }
+}
+
+
