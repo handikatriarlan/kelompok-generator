@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f6f6f6;
@@ -57,7 +57,6 @@ textarea {
     border-radius: 5px;
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Menetapkan font yang sama seperti teks lainnya */
     box-sizing: border-box;
 }
 
@@ -69,7 +68,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 button {
     padding: 12px 24px;
-    background-color: #ff6600;
+    background-color: #2471f7;
+    font-weight: bold;
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,7 +80,12 @@ button {
 }
 
 button:hover {
-    background-color: #ff5500;
+    background-color: #0c50c6;
+}
+
+#courseContainer,
+#teamsContainer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #teamsContainer {
