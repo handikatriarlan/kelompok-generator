@@ -7,8 +7,7 @@ body {
 
 .container {
     width: 90%;
-    /* Mengubah lebar kontainer agar lebih responsif */
-    max-width: 1024px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -57,7 +56,8 @@ textarea {
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Menetapkan font yang sama seperti teks lainnya */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Menetapkan font yang sama seperti teks lainnya */
     box-sizing: border-box;
 }
 
@@ -120,33 +120,61 @@ button:hover {
     margin-left: 15px;
 }
 
-#courseContainer {
-    text-align: center;
-    margin-bottom: 20px;
+#printButton {
+    margin: 20px;
 }
 
-/* CSS untuk tampilan cetak */
 @media print {
-    body * {
-        visibility: hidden; /* Semua elemen disembunyikan */
+    @page {
+        size: letter;
     }
-    #courseContainer, #teamsContainer, #teamsContainer * {
-        visibility: visible; /* Hanya elemen-elemen yang ingin dicetak ditampilkan */
+
+    body>* {
+        visibility: hidden;
     }
-    #courseContainer, #teamsContainer {
-        position: absolute; /* Mengatur posisi absolut untuk elemen hasil */
-        top: 0; /* Menempatkan elemen di bagian paling atas */
-        left: 0; /* Menempatkan elemen di bagian paling kiri */
-        width: 100%; /* Menyesuaikan lebar elemen dengan lebar halaman cetak */
-        margin: 0; /* Menghapus margin */
-        padding: 0; /* Menghapus padding */
+
+    .container {
+        width: 100%;
     }
+
+    #courseContainer,
+    #teamsContainer,
+    #teamsContainer * {
+        visibility: visible;
+    }
+
     #courseContainer {
-        margin-bottom: 20px; /* Memberikan jarak antara elemen hasil mata kuliah dan elemen hasil kelompok */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 10px;
     }
+
+    #teamsContainer {
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
     .team {
-        margin-bottom: 20px; /* Memberikan jarak antara setiap kelompok */
+        margin-bottom: 15px;
     }
 }
 
+@media screen and (max-width: 768px) {
+    .team {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .team {
+        flex: 0 0 calc(100% - 40px);
+    }
+}

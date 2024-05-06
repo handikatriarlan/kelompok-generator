@@ -1,3 +1,11 @@
+function printPage() {
+    window.print();
+}
+
+function showPrintButton() {
+    document.getElementById("printButton").style.display = "inline";
+}
+
 $(document).ready(function () {
     $('#teamForm').submit(function (event) {
         event.preventDefault();
@@ -20,8 +28,10 @@ $(document).ready(function () {
         const teams = generateTeams(namesArray, numGroupsInput);
 
         displayTeams(teams);
+        showPrintButton();
     });
 });
+
 
 function generateTeams(names, numGroups) {
     let teams = [];

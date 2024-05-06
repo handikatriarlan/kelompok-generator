@@ -19,19 +19,14 @@
             <input type="number" id="numGroups" name="numGroups" min="1" required aria-label="Input jumlah kelompok">
             <label for="course" aria-label="Mata Kuliah:">Mata Kuliah:</label>
             <input type="text" id="course" name="course" required aria-label="Kolom input mata kuliah">
-            <button type="submit" aria-label="Klik untuk menghasilkan kelompok">LETSGAUR</button>
+            <button type="submit" aria-label="Klik untuk menghasilkan kelompok">LET'S GAUR</button>
         </form>
         <div id="courseContainer"></div>
         <div id="teamsContainer"></div>
+        <button id="printButton" onclick="printPage()" style="display: none;">Cetak Hasil</button>
     </div>
-    <button onclick="printPage()">Cetak Hasil</button>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        function printPage() {
-            window.print(); // Memanggil fungsi untuk mencetak halaman
-        }
-    </script>
 </body>
 
 </html>
