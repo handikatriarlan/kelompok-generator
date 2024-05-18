@@ -7,6 +7,10 @@ function showPrintButton() {
 }
 
 $(document).ready(function () {
+    $.get('mahasiswasi3.txt', function (data) {
+        $('#names').val(data);
+    });
+
     $('#teamForm').submit(function (event) {
         event.preventDefault();
 
