@@ -200,6 +200,32 @@ button:hover {
     .container {
         width: 80%;
         border-radius: 0;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .team h3,
+    #courseContainer {
+        font-size: 18px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="number"],
+    .team li {
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 785px;
     }
 
     .team {
