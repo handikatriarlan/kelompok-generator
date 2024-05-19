@@ -100,7 +100,6 @@ button:hover {
     background-color: #0c50c6;
 }
 
-#courseContainer,
 #teamsContainer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
@@ -226,8 +225,7 @@ button:hover {
         font-size: 28px;
     }
 
-    .team h3,
-    #courseContainer {
+    .team h3 {
         font-size: 18px;
     }
 
@@ -240,6 +238,19 @@ button:hover {
 
     textarea {
         height: 785px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #courseContainer h2 {
+        font-size: 20px;
     }
 
     .team {
